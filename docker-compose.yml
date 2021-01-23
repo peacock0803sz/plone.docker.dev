@@ -1,0 +1,17 @@
+version: "3"
+services:
+  plone:
+    # image: plone/plone:5.2.2
+    build:
+      context: .
+    environment:
+      SITE: Plone
+      PLONE_ADDONS: "your.package"
+      PLONE_DEVELOP: "src/your.package"
+      UID: $UID
+      GID: $GID
+    ports:
+      - "5000:8080"
+    volumes:
+      - ./data:/data
+      - ./src/:/plone/instance/src/
