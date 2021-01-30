@@ -11,6 +11,8 @@ $ git clone https://github.com/peacock0803sz/plone.docker.dev.git
 $ cd plone.docker.dev
 $ mkdir src
 $ # copy, git clone or make symlink to under src/
+$ echo UID=$UID > .env
+$ echo GID=$GID >> .env
 ```
 
 Next, edit some environments variables in services.plone.environment of docker-compose.yml
